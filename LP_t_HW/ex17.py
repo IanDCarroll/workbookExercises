@@ -15,11 +15,12 @@ print "Copying from %s to %s" % (from_file, to_file)
 # into a single one and simply removing the last call to in_file.
 indata = open(from_file).read()
 
-print "The input file is %d bytes long" % len(indata)
+# Commenting out unneccessary asking.
+# print "The input file is %d bytes long" % len(indata)
 
-print "Does the output file exist? %r" % exists(to_file)
-print "Ready, hit RETURN to continue, CTRL-C to abort."
-raw_input()
+# print "Does the output file exist? %r" % exists(to_file)
+# print "Ready, hit RETURN to continue, CTRL-C to abort."
+# raw_input()
 
 out_file = open(to_file, 'w')
 out_file.write(indata)
@@ -30,8 +31,8 @@ out_file.close()
 
 # in_file does have another call, but if I just comment out the whole 
 # command the script runs. I worry that indata never closes the file,
-# but there are no error messages. So I suppose it's all right. 
-# If anyone knows, please let me know.
+# but there are no error messages. So I suppose it's all right.
+# actually, It is alright. Python automacially closes it for me.
 
 #in_file.close()
 
