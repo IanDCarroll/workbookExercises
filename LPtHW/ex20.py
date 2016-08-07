@@ -13,8 +13,10 @@ def rewind(f):
     f.seek(0)
 
 # my_file.readline() reads one line of the file. The first is 1, not 0.
+# by placing a coma at the end of a print statement, 
+# you can have it not add a newline.
 def print_a_line(line_count, f):
-    print line_count, f.readline()
+    print line_count, f.readline(),
 
 # before anything can be done, the -script- needs to open the file.
 current_file = open(input_file)
@@ -47,8 +49,11 @@ print_a_line(current_line, current_file)
 # How is .readline() being passed which line to read?
 #    It isn't being passed anything!
 #    each time it's called, it reads the next line in the file!
+#    That's not thanks to some sort of closure, The file's read position
+#    is maintained by the code that imports the file
+
 #    If you pass it a number, it reads that many characters each time.
 #    It does not accept more than one variable.
 #       How would you read a specific line?
 # What does the number in .seek() represent? 
-#    The character's position in the text.
+#    The character's position in the text. The byte.
