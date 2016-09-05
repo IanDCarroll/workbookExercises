@@ -2,7 +2,7 @@ This is a record of my journey through workbooks.
 
 The Puropse of these exercises is to shore up the basics and reduce knowlege gaps in my understanding. 
 
-Some parts of these problems I already understand. The parts I do not are the parts that I have knowlege gaps. There are quite a few mor than I expected! Moments of learning or reinforcement of basics will be included in comments to get me in the habit of good documentation.
+Some parts of these problems I already understand. The parts I do not are where the gaps exist. There are quite a few more than I expected! Moments-of-learning and reinforcement-of-basics will be included in comments to get me in the habit of good documentation.
 
 As for scrum, Scrum is not anti-documentation. It just puts working code first.
 Good doccumentation serves working code.
