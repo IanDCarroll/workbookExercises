@@ -26,7 +26,11 @@ There are five doors that are conveiently labeled.
 """
 
     while True:
-        go_to = int(raw_input("Type the number where you go > "))
+        try:
+            go_to = int(raw_input("Type the number where you go > "))
+        except ValueError:
+            print "I don't know what that means!"
+            house()
 
         if go_to == 1:
             library()
@@ -53,7 +57,11 @@ There are some weird-ass book up in here!
 """
 
     while True:
-        read = int(raw_input("Type the number of the book you read > "))
+        try:
+            read = int(raw_input("Type the number of the book you read > "))
+        except ValueError:
+            print "You reach for that book, but discover it doesn't exist."
+            library()
 
         if read == 1:
             print "You learn some great recipes for serving human flesh."
@@ -80,7 +88,12 @@ This is a bad room.
 """
 
     while True:
-        check_out = int(raw_input("Type the number of what you check out > "))
+        try:
+            check_out = int(raw_input("Type the number of what you check out > "))
+        except ValueError:
+            print "You go to check that thing out, but it doesn't exist."
+            bed_room()
+
         if check_out == 1:
             print "Your doppleganger stares back at you. It's creepy."
         elif check_out == 2:
@@ -106,7 +119,11 @@ There is nothing living in this room. This room is a liar!
 """
 
     while True:
-        check_out = int(raw_input("Type the number of what you check out > "))
+        try:
+            check_out = int(raw_input("Type the number of what you check out > "))
+        except ValueError:
+            print "You go to check that thing out, but it doesn't exist."
+            living_room()
 
         if check_out == 1:
             print "There's skeleton in the chair! It has two heads!"
@@ -138,8 +155,10 @@ At the other end is A GHOST!!!!!
 \t4 - Mozart's Violin Concerto No.3 in G Major
 \t5 - Run Away!
 """
-
-    choice = int(raw_input("Type the number of your favorite color > "))
+    try:
+        choice = int(raw_input("Type the number of your favorite color > "))
+    except ValueError:
+        die("\"Oh, I hate mumblers!\" The ghost devours your soul.")
 
     if choice == 1:
         print "\"Oh, good. that's my favorite too. Have a house key.\""
@@ -165,7 +184,11 @@ You sweep a few dead mice off the safe. It has a combination lock.
 """
 
     while True:
-        choice = int(raw_input("Type the number of your choice > "))
+        try:
+            choice = int(raw_input("Type the number of your choice > "))
+        except ValueError:
+            print "You go to do that thing, but can't!"
+            safe()
 
         if choice == 1:
             combination()
@@ -177,7 +200,10 @@ You sweep a few dead mice off the safe. It has a combination lock.
 def combination():
     global friend_key
 
-    code = int(raw_input("Enter in the code for the safe > "))
+    try:
+        code = int(raw_input("Enter in the code for the safe > "))
+    except ValueError:
+        die("The safe eats your life force. You become another decoration.")
 
     if code == 1701:
         print "The safe opens. You take a key from inside it."
@@ -197,7 +223,11 @@ def wardrobe():
 """
 
     while True:
-        choice = int(raw_input("Type the number of your choice > "))
+        try:
+            choice = int(raw_input("Type the number of your choice > "))
+        except ValueError:
+            print "You go to do that thing, but suddenly cant!"
+            wardrobe()
 
         if choice == 1 and friend_key == False:
             print "It won't open. It looks like it needs a key."
@@ -221,7 +251,11 @@ The door is open, but what about your friend?
 """
 
     while True:
-        decision = int(raw_input("Type the number for what you do > "))
+        try:
+            decision = int(raw_input("Type the number for what you do > "))
+        except ValueError:
+            print "No, seriously. 1 or 2."
+            dilema()
 
         if decision == 1:
             die("The ghost of your friend haunts you forever!")
