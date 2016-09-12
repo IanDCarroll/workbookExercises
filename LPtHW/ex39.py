@@ -4,7 +4,7 @@ states = {
     'Florida': 'FL',
     'California': 'CA',
     'New York': 'NY',
-    'Michigan': 'MI'
+    'Michigan': 'MI',
 }
 
 # create a basic set of states and some cities in them
@@ -18,6 +18,14 @@ cities = {
 cities['NY'] = 'New York'
 cities['OR'] = 'Portland'
 
+states['Maryland'] = 'MD'
+states['Virgina'] = 'VA'
+states['Pennsylvania'] = 'PA'
+
+cities['MD'] = 'Baltimore'
+cities['VA'] = 'Richmond'
+cities['PA'] = 'Gettysburg'
+
 # print out some cities
 print '-' * 10
 print "NY State has: ", cities['NY']
@@ -30,6 +38,8 @@ print "Florida's abreviation is: ", states['Florida']
 
 # print every state abreviation
 print '-' * 10
+# mydict.items() is a built-in method of dictionaries. 
+# It returns a copy of the dictionary's key:value pairs.
 for state, abbrev in states.items():
     print "%s is abbreviated %s" % (state, abbrev)
 
@@ -54,3 +64,10 @@ if not state:
 # get a city with a default value
 city = cities.get('TX', 'Does Not Exist')
 print "The city for the state 'TX' is: %s" % city
+
+print "The number of states is %d" % len(states)
+
+# Order is non-random, but varies across python implementations
+# and the order in which the items were added to the dictionary.
+
+
