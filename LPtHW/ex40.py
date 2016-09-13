@@ -1,3 +1,4 @@
+# the class is the blueprint for how to buld the object
 class Song(object):
 
     # A class must be initialized to be used, with any passing variables
@@ -23,6 +24,7 @@ class Song(object):
         self.border()
         print ''
 
+# these calls are specific orders to build objects with name x and args y.
 happy_bday = Song(["Happy birthday to you",
                    "I don't want to get sued",
                    "So I'll stop right there"])
@@ -45,6 +47,16 @@ the_words = ["Everything you know is wrong",
 #Abstracting the lyrics in this way makes for a prettier call.
 everything = Song(the_words)
 
+# You can apparently pass functions into a list!
+your_lyrics = [ raw_input("First line > "), 
+                raw_input("Secnd line > "), 
+                raw_input("Third line > "),
+                raw_input("Final Line > ") ]
+
+whatevs = Song(your_lyrics)
+
+
+# These calls call a method of the initialised objects to perform a task.
 happy_bday.sing_me_a_song()
 
 bulls_on_parade.sing_me_a_song()
@@ -52,3 +64,5 @@ bulls_on_parade.sing_me_a_song()
 lucy_in_the_sky.sing_me_a_song()
 
 everything.sing_me_a_song()
+
+whatevs.sing_me_a_song()
