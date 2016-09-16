@@ -12,7 +12,7 @@ class Dog(Animal):
 ## Cat is an animal
 class Cat(Animal):
 
-    def __init_(self, name):
+    def __init__(self, name):
         ## Cat has-a name
         self.name = name
 
