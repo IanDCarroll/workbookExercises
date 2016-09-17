@@ -1,6 +1,8 @@
 ## animal is-a object (yes, sort of confusing) look at the extra credit
 class Animal(object):
-    pass
+
+    def __init__(self):
+        self.isAlive = True
 
 ## Dog is an Animal
 class Dog(Animal):
@@ -40,16 +42,27 @@ class Employee(Person):
         self.salary = salary
 
 ## Fish is an object
-class Fish(object):
-    pass
+class Fish(Animal):
+
+    def __init__(self):
+        super(Fish, self).__init__()
+        self.swim = "It swims deftly through the water."
 
 ## Salmon is-a fish
 class Salmon(Fish):
-    pass
+    
+     def __init__(self):
+         super(Salmon, self).__init__()
+         self.isCanned = True
+         self.isAlive = False
 
 ## Halibut is-a fish
 class Halibut(Fish):
-    pass
+
+    def __init__(self):
+        super(Halibut, self).__init__()
+        self.beingEaten = True
+        self.isAlive = "Not quite dead yet..."
 
 
 ## rover is-a Dog
@@ -78,3 +91,13 @@ crouse = Salmon()
 
 ## harry is-a Halibut
 harry = Halibut()
+
+print "Harry is Alive? ", harry.isAlive
+
+print "Flipper swims? ", flipper.swim
+
+print "Crouse is canned? ", crouse.isCanned
+print "Crouse is Alive? ", crouse.isAlive
+
+print "Harry is being eaten? ", harry.beingEaten
+print "Harry is Alive? ", harry.isAlive
