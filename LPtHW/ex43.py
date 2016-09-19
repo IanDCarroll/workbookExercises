@@ -79,17 +79,63 @@ class CentralCorridor(Scene):
 class LaserWeaponArmory(Scene):
 
     def enter(self):
-        return 'death'
+        print "Laser Weapon Armory"
+       
+        action = raw_input("> ")
+
+        if action == "":
+            print "die!"
+            return 'death'
+        elif action == ".":
+            print "die!"
+            return 'death'
+        elif action == "!":
+            print "safe!"
+            return 'the_bridge'
+        else:
+            print "DOES NOT COMPUTE!"
+            return 'laser_weapon_armory'
 
 class TheBridge(Scene):
 
     def enter(self):
-        pass
+        print "The Bridge"
+       
+        action = raw_input("> ")
+
+        if action == "":
+            print "die!"
+            return 'death'
+        elif action == ".":
+            print "die!"
+            return 'death'
+        elif action == "!":
+            print "safe!"
+            return 'escape_pod'
+        else:
+            print "DOES NOT COMPUTE!"
+            return 'the_bridge'
+       
 
 class EscapePod(Scene):
 
     def enter(self):
-        pass
+        print "The Escape Pod"
+       
+        action = raw_input("> ")
+
+        if action == "":
+            print "die!"
+            return 'death'
+        elif action == ".":
+            print "die!"
+            return 'death'
+        elif action == "!":
+            print "safe!"
+            exit(0)
+        else:
+            print "DOES NOT COMPUTE!"
+            return 'escape_pod'
 
 
 class Map(object):
@@ -97,7 +143,9 @@ class Map(object):
     scenes = {
         'central_corridor' : CentralCorridor(),
         'death' : Death(),
-        'laser_weapon_armory' : LaserWeaponArmory()
+        'laser_weapon_armory' : LaserWeaponArmory(),
+        'the_bridge' : TheBridge(),
+        'escape_pod' : EscapePod()
     }
 
     def __init__(self, start_scene):
