@@ -149,18 +149,41 @@ class LaserWeaponArmory(Scene):
 class TheBridge(Scene):
 
     def enter(self):
-        print "The Bridge"
+        print """
+        You burst onto the Bridge with "Jenny" under your arm and surprise
+        5 Gothons who are trying to take control of the ship. each of them has
+        an even uglier clown costume than the last. They haven't pulled their
+        weapons out yet, as they see the active neutron destruct bomb under
+        your arm and don't want to set it off. 
+        Jenny's mean when you set her off!
+        """
        
         action = raw_input("> ")
 
-        if action == "":
-            print "die!"
+        if action == "throw Jenny":
+            print """
+        In a panic you throw Jenny at the group of Gothons and make a leap
+        for the door. Right as you drop it a Gothon shoots you right in the
+        back killing you. As you die you see another Gothon frantically
+        trying to disarm Jenny. But Jenny doesn't like it when you try to
+        disarm her like that. You die knowing they will probably blow up
+        when Jenny goes off.
+            """
             return 'death'
-        elif action == ".":
-            print "die!"
-            return 'death'
-        elif action == "!":
-            print "safe!"
+        elif action == "gently place Jenny":
+            print """
+        You point your blaster at Jenny and the Gothons put their hands up
+        and start to sweat. You inch backward to the door, open it, and
+        then carefully place Jenny on the floor. 
+            "Sorry to leave you like this, baby", you say,
+            "but it looks like these fine life-forms are looking for a good 
+        time, too. Maybe you can entertain them a while -"
+        You keep your blaster pointed at the bomb as you jump back through
+        the door, punch the close button and blast the lock so the Gothons
+        can't get out.
+        Now that the bomb is in place you run to the escape pod to get off
+        this tin can.
+            """
             return 'escape_pod'
         else:
             print "DOES NOT COMPUTE!"
