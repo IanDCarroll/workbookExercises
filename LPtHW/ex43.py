@@ -115,7 +115,8 @@ class LaserWeaponArmory(Scene):
         code = "%d%d%d" % (randint(1,9),randint(1,9),randint(1,9)) 
         guess = raw_input("[Keypad]> ")
         guesses = 0
-        
+       
+        guesses += 1 
         while guess != code and guess != '8675309' and guesses < 10:
             print "BZZZZEDDD!"
             guesses += 1
