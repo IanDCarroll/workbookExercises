@@ -193,22 +193,47 @@ class TheBridge(Scene):
 class EscapePod(Scene):
 
     def enter(self):
-        print "The Escape Pod"
+        print """
+        You rush through the ship desperately trying to make it to the escape
+        pod before the whole ship explodes.  It seems like hardly any Gothons
+        are  on the ship, so you run clear of interference. You get to the 
+        chamber with the escape pods and now need to pick one to take.  Some of
+        them could be damaged but you don't have time to look. There's 5 pods,
+        which one do you take?
+        """
        
-        action = raw_input("> ")
+        good_pod = randint(1,5)
+        guess = raw_input("[Pod #]> ")
 
-        if action == "":
-            print "die!"
+        if guess != good_pod and guess != "don't even look":
+            print """ 
+        You jump into pod %s and hit the eject button. The pod escapes out into
+        the void of space, then implodes as the hull ruptures, crushing your 
+        body into jam jelly.
+            """ % guess
             return 'death'
-        elif action == ".":
-            print "die!"
-            return 'death'
-        elif action == "!":
-            print "safe!"
+        elif guess == "don't even look":
+            print """ 
+            You lucky bastard! You lucky, lucky bastard! 
+
+        You jump into some random pod and hit the eject button. The pod  easily
+        slides out into space heading to the planet below.  As it flies to the
+        planet, you look back and see your ship implode then explode like a 
+        bright star, taking out the Gothon ship at the same time.
+
+            You Won!
+            """
             exit(0)
         else:
-            print "DOES NOT COMPUTE!"
-            return 'escape_pod'
+            print """ 
+        You jump into pod %s and hit the eject button. The pod easily slides out 
+        into space heading to the planet below.  As it flies to the planet,
+        you look back and see your ship implode then explode like a bright
+        star, taking out the Gothon ship at the same time.
+
+            You Won!
+            """ % guess
+            exit(0)
 
 
 class Map(object):
