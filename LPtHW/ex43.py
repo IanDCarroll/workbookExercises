@@ -49,7 +49,7 @@ class CentralCorridor(Scene):
 
     def enter(self):
         print """
-        The gothons of Planet Percal #25 have invaded your ship and destroyed
+        The Gothons of Planet Percal #25 have invaded your ship and destroyed
         your entire crew.  You are the last surviving member and your last
         mission is to get the neutron destruct bomb from the weapons Armory,
         put it in the bridge, and blow the ship up after getting into an
@@ -64,13 +64,36 @@ class CentralCorridor(Scene):
         action = raw_input("> ")
 
         if action == "shoot!":
-            print "die!"
+            print """
+        Quick on the draw you yank out your blaster and fire it at the Gothon.
+        His clown costume is flowing and moving around his body, which throws
+        off your aim. Your laser hits his costume but misses him entirely. This
+        completely ruins his brand new costume his mother bought him, which
+        makes him fly into a rage and blast you repeadedly in the face until
+        you are dead.  Then he eats you.
+            """
             return 'death'
         elif action == "dodge!":
-            print "die!"
+            print """
+        Like a world class boxer you dodge, weave, slip and slide right
+        as the Gothon's blaster cranks a laser past your head.
+        In the middle of your artful dodge your foot slips and you
+        bang your head on the metal wall and pass out.
+        You wake up shortly after only to die as the Gothon stomps on
+        your head and eats you.
+            """
             return 'death'
         elif action == "tell a joke":
-            print "funny."
+            print """
+        Lucky for you they made you learn Gothon insults in the academy.
+        You tell the one Gothon joke you know:
+            "Lbhe zbgure vf fb sng,
+             jura fur fvgf nebhaq gur ubhfr,
+             fur fvgf nebbhaq gur ubhfr."
+       The gothon stops, tries not to laugh, then bursts out laughing and can't
+       move. While he's laughing you run up and shoot him square in the head
+       putting him down, then jump through the Weapon Armory door.
+            """
             return 'laser_weapon_armory'
         else:
             print "DOES NOT COMPUTE!"
@@ -79,22 +102,40 @@ class CentralCorridor(Scene):
 class LaserWeaponArmory(Scene):
 
     def enter(self):
-        print "Laser Weapon Armory"
-       
-        action = raw_input("> ")
+        print """
+        You do a dive roll into the Weapon Armory, crouch and scan the room
+        for more Gothons that might be hiding.  it's dead quiet, too quiet.
+        You stand up and run to the far side of the room and find the neutron
+        bomb in its container. There's a keypad lock on the box and you need
+        the code to get the bomb out.  If you get the code wrong 10 times then
+        the lock closes forever and you can't get the bomb. 
+        The code is 3 digits.
+        """
 
-        if action == "":
-            print "die!"
-            return 'death'
-        elif action == ".":
-            print "die!"
-            return 'death'
-        elif action == "!":
-            print "safe!"
+        code = "%d%d%d" % (randint(1,9),randint(1,9),randint(1,9)) 
+        guess = raw_input("[Keypad]> ")
+        guesses = 0
+
+        while guess != code and guesses < 10:
+            print "BZZZZEDDD!"
+            guesses += 1
+            guess = raw_input("[Keypad]> ")
+
+        if guess == code:
+            print """
+        The container clicks open and the seal breaks, letting gas out.
+        You grab the neutron bomb and run as fast as you can to the
+        bridge where you must place it in the right spot.
+            """
             return 'the_bridge'
         else:
-            print "DOES NOT COMPUTE!"
-            return 'laser_weapon_armory'
+            print """
+        The lock buzzes one last time and then you hear a sickening melting
+        sound as the mechnaism is fused together.
+        you decide to sit there, and finally the Gothons blow up the ship
+        from their ship and you die.
+            """
+            return 'death'
 
 class TheBridge(Scene):
 
