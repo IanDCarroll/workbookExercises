@@ -5,23 +5,7 @@
 
 # The Garden of Flowing Fragrance: A Relaxing Chinese Garden Experience.
 
-from sys import exit
-from random import randint
-
-class Scene(object):
-
-    distractions = ['a hummingbird']
-    phrase = distractions[randint(0, len(distractions)-1)]
-    distraction = "You are disctracted by %s." % phrase
-
-#    def __init__(self):
-#        self.distractions = distractions
-#        self.phrase = phrase
-#        self.distraction = distraction
-
-    def enter(self):
-        print "This scene is not yet configured."
-        return 'exit'
+import ex45scenes as s 
 
 class Engine(object):
 
@@ -36,36 +20,11 @@ class Engine(object):
             next_scene_name = current_scene.enter()
             current_scene = self.scene_map.next_scene(next_scene_name)
 
-class Exit(Scene):
-
-    ways = ['You leave.']
-
-    def enter(self):
-        print Exit.ways[randint(0, len(self.ways)-1)]
-        exit(0)
-
-class Entrance(Scene):
-
-    def enter(self):
-        print "You enter."
-
-        action = raw_input("> ")
-
-        if action == "1":
-            print "1"
-            return 'exit'
-        elif action == "2":
-            print "2"
-            return 'exit'
-        else:
-            print self.distraction
-            return 'entrance'
-
 class Map(object):
 
     scenes = {
-        'entrance' : Entrance(),
-        'exit' : Exit()
+        'entrance' : s.Entrance(),
+        'exit' : s.Exit()
     }
 
     def __init__(self, start_scene):
