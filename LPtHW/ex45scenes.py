@@ -1,11 +1,19 @@
 from sys import exit
 from random import randint
+import ex45res as r
 
-class AllElse(object):
 
-    distractions = ['a hummingbird']
-    phrase = distractions[randint(0, len(distractions)-1)]
-    distraction = "You are disctracted by %s." % phrase
+
+# The catch-all function that returns all "else:" inputs
+def distraction():
+    phrase = r.distractions[randint(0, len(r.distractions)-1)]
+    return  "You are disctracted by %s." % phrase
+
+
+
+# The scenes:
+# make sure to include any scene changes in the dictionary of the Map object
+# in ex45.py otherwise it can't be accessed!
 
 class Exit(object):
 
@@ -14,6 +22,7 @@ class Exit(object):
     def enter(self):
         print Exit.ways[randint(0, len(self.ways)-1)]
         exit(0)
+
 
 class Entrance(object):
 
@@ -29,5 +38,5 @@ class Entrance(object):
             print "2"
             return 'exit'
         else:
-            print AllElse.distraction
+            print distraction()
             return 'entrance'

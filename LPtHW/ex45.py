@@ -7,6 +7,7 @@
 
 import ex45scenes as s 
 
+
 class Engine(object):
 
     def __init__(self, scene_map):
@@ -20,8 +21,10 @@ class Engine(object):
             next_scene_name = current_scene.enter()
             current_scene = self.scene_map.next_scene(next_scene_name)
 
+
 class Map(object):
 
+    # check ex45scenes.py and make sure all scenes are included here too.
     scenes = {
         'entrance' : s.Entrance(),
         'exit' : s.Exit()
