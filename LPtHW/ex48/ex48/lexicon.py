@@ -33,7 +33,6 @@ class Lex(object):
 
 
 def scan(user_input):
-    global index
     end_list = []
 
     starting_list = user_input.split()
