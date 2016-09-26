@@ -5,15 +5,15 @@ index = [('direction', 'north'),
          ('direction', 'east')]
 
 
-def scan(string):
+def scan(user_input):
     global index
+    end_list = []
 
-    string.split(' ')
+    starting_list = user_input.split()
 
-    # word in string returns the string, not the index
-    for word in string:
-        for i in range(0, len(index)):
-            if word in index[i][1]:
-                return [index[i]]
-            else:
-                return "no"
+    for i in range(0, len(starting_list)):
+        for j in range(0, len(index)):
+            if starting_list[i] in index[j][1]:
+                end_list.append(index[j])
+
+    return end_list
