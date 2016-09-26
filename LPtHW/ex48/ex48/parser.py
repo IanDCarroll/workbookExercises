@@ -5,10 +5,10 @@ class ParserError(Exception):
 class Sentence(object):
 
     def __init__(self, subject, verb, object):
-    # remember we take ('noun', 'princess') tuples and conert them
-    self.subject = subject[1]
-    self.verb = verb[1]
-    self.object = object[1]
+        # remember we take ('noun', 'princess') tuples and conert them
+        self.subject = subject[1]
+        self.verb = verb[1]
+        self.object = object[1]
 
 
 def peek(word_list):
@@ -39,10 +39,10 @@ def skip(word_list, word_type):
 def parse_verb(word_list):
     skip(word_list, 'stop')
 
-    if peek(word_list == 'verb':
+    if peek(word_list) == 'verb':
         return match(word_list, 'verb')
-    else
-       raise ParserError("Expected a verb next."))
+    else:
+       raise ParserError("Expected a verb next.")
 
 
 def parse_object(word_list):
