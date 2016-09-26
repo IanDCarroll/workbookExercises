@@ -23,7 +23,7 @@ def scan(user_input):
 
     for i in range(0, len(starting_list)):
         for j in range(0, len(Lex.icon)):
-            if starting_list[i] in Lex.icon[j][1]:
+            if starting_list[i] == Lex.icon[j][1]:
                 end_list.append(Lex.icon[j])
 
     return end_list
