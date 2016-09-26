@@ -25,9 +25,6 @@ class Lex(object):
             ('noun', 'bear'),
             ('noun', 'princess'),
             ('noun', 'cabinet'),
-            ('number', '3'),
-            ('number', '1234'),
-            ('number', '91234'),
             ('error', 'asdfadfasdf'),
             ('error', 'ias')]
 
@@ -38,8 +35,12 @@ def scan(user_input):
     starting_list = user_input.lower().split()
 
     for i in range(0, len(starting_list)):
-        for j in range(0, len(Lex.icon)):
-            if starting_list[i] == Lex.icon[j][1]:
-                end_list.append(Lex.icon[j])
+        try:
+            int(starting_list[i])
+            end_list.append(('number', starting_list[i]))
+        except ValueError:
+            for j in range(0, len(Lex.icon)):
+                if starting_list[i] == Lex.icon[j][1]:
+                    end_list.append(Lex.icon[j])
 
     return end_list
