@@ -12,7 +12,12 @@ class Lex(object):
             ('stop', 'in'),
             ('stop', 'of'),
             ('noun', 'bear'),
-            ('noun', 'princess')]
+            ('noun', 'princess'),
+            ('number', '3'),
+            ('number', '1234'),
+            ('number', '91234'),
+            ('error', 'ASDFADFASDF'),
+            ('error', 'IAS')]
 
 
 def scan(user_input):
