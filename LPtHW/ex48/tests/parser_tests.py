@@ -57,3 +57,18 @@ def test_parser_with_extras():
     assert_equal(result2, 'open')
     assert_equal(result3, 'door')
 
+def parser_raises_right_errors():
+    assert_raises(ParserError, parse_sentence, [('error', 'blue'),
+                                                ('stop', 'the'),
+                                                ('noun', 'door')])
+    assert_raises(ParserError, parse_sentence, [('noun', 'princess'),
+                                                ('noun', 'bear'),
+                                                ('verb', 'eat')])
+    assert_raises(ParserError, parse_sentence, [('verb', 'kill'),
+                                                ('verb', 'kill')])
+
+
+
+
+
+
