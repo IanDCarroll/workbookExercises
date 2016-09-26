@@ -4,7 +4,15 @@ class Lex(object):
 
     icon = [('direction', 'north'),
             ('direction', 'south'),
-            ('direction', 'east')]
+            ('direction', 'east'),
+            ('verb', 'go'),
+            ('verb', 'kill'),
+            ('verb', 'eat'),
+            ('stop', 'the'),
+            ('stop', 'in'),
+            ('stop', 'of'),
+            ('noun', 'bear'),
+            ('noun', 'princess')]
 
 
 def scan(user_input):
