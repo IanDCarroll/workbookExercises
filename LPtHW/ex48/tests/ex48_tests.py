@@ -54,8 +54,15 @@ def test_numbers():
 
 
 def test_errors():
-    assert_equal(lexicon.scan('ASDFADFASDF'), [('error', 'ASDFADFASDF')])
+    assert_equal(lexicon.scan('ASDFADFASDF'), [('error', 'asdfadfasdf')])
     result = lexicon.scan("bear IAS princess")
     assert_equal(result, [('noun', 'bear'),
-                          ('error', 'IAS'),
+                          ('error', 'ias'),
                           ('noun', 'princess')])
+
+def test_cases():
+    result = lexicon.scan('THE Princess eAt bEaR')
+    assert_equal(result, [('stop', 'the'),
+                          ('noun', 'princess'),
+                          ('verb', 'eat'),
+                          ('noun', 'bear')])

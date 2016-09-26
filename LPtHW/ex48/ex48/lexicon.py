@@ -28,14 +28,14 @@ class Lex(object):
             ('number', '3'),
             ('number', '1234'),
             ('number', '91234'),
-            ('error', 'ASDFADFASDF'),
-            ('error', 'IAS')]
+            ('error', 'asdfadfasdf'),
+            ('error', 'ias')]
 
 
 def scan(user_input):
     end_list = []
 
-    starting_list = user_input.split()
+    starting_list = user_input.lower().split()
 
     for i in range(0, len(starting_list)):
         for j in range(0, len(Lex.icon)):
