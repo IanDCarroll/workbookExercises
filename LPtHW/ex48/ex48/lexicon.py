@@ -24,9 +24,7 @@ class Lex(object):
             ('noun', 'door'),
             ('noun', 'bear'),
             ('noun', 'princess'),
-            ('noun', 'cabinet'),
-            ('error', 'asdfadfasdf'),
-            ('error', 'ias')]
+            ('noun', 'cabinet')]
 
 
 def scan(user_input):
@@ -42,5 +40,7 @@ def scan(user_input):
             for j in range(0, len(Lex.icon)):
                 if starting_list[i] == Lex.icon[j][1]:
                     end_list.append(Lex.icon[j])
+        if i != len(end_list)-1:
+            end_list.append(('error', starting_list[i]))
 
     return end_list
