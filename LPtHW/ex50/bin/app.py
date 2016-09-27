@@ -6,10 +6,12 @@ urls = (
 
 app = web.application(urls, globals())
 
-class index:
+render = web.template.render('templates/')
+
+class Index:
     def GET(self):
-        greeting = "Salutations t' The Globe!"
-        return greeting
+        greeting = "A Salutation t'The Globe!"
+        return render.index(greeting = greeting)
 
 if __name__ == "__main__":
     app.run()
