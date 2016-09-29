@@ -32,6 +32,7 @@ def test_map():
     assert_equal(start.go('down').go('up'), start)
 
 def test_gothon_game_map():
+    # !!! Only expected input is valid; Make a test for else cases !!! #
     START = central_corridor
     assert_equal(START.go('shoot!'), shoot_death)
     assert_equal(START.go('dodge!'), dodge_death)
