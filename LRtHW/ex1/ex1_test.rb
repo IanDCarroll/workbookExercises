@@ -3,11 +3,15 @@ require './ex1'
 
 class TestBlog < Minitest::Test
 
-  def setup
-    @ex1 = Blog.new
-  end
+  describe Blog do
+    before do
+      @ex1 = Blog.new
+    end
 
-  def test_title_is_treehouse
-    assert_equal "Treehouse Blog", @ex1.title
+    describe "#title" do
+      it "returns the tile of the blog" do
+        @ex1.title.must_equal "Treehouse Blog"
+      end
+    end
   end
 end
