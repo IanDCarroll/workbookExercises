@@ -10,9 +10,9 @@ class Ex3Test < Minitest::Test
   def test_line_1
     assert_output(/I will now count my chickens/) { @ex3.math }
   end
-#  def test_line_2
-#    assert_output(/Hens 30/) { @ex3.math }
-#  end
+  def test_line_2
+    assert_output(/Hens 30/) { @ex3.math }
+  end
 #  def test_line_3
 #    assert_output(/Roosters 97/) { @ex3.math }
 #  end
