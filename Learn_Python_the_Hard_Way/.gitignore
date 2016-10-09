@@ -1,0 +1,5 @@
+# Python C compiled optimized code #
+*.pyc
+
+# Vim swap files #
+*.swp
