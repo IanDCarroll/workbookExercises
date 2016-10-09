@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require './ex1'
 
-class TestBlog < Minitest::Test
+class Ex1Test < Minitest::Test
 
   def setup
     @ex1 = Ex1.new
