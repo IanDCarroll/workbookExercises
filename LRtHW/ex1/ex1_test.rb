@@ -3,15 +3,13 @@ require './ex1'
 
 class TestBlog < Minitest::Test
 
-  describe Blog do
-    before do
-      @ex1 = Blog.new
-    end
+  def setup
+    @ex1 = Ex1.new
+  end
 
-    describe "#title" do
-      it "returns the tile of the blog" do
-        @ex1.title.must_equal "Treehouse Blog"
-      end
-    end
+  def test_output
+    assert_output(/Hello World!/) { @ex1.firstProgram }
+    assert_output(/Hello Again/) { @ex1.firstProgram }
+    # assert_output(/Hello World!/) { @ex1.firstProgram }
   end
 end
