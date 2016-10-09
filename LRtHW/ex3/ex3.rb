@@ -1,7 +1,7 @@
 class Ex3
 
   def math
-    puts ""
+    puts "I will now count my chickens."
   end
 
 end
