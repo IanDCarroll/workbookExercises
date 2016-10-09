@@ -8,6 +8,7 @@ class Ex1
     puts "Yay! Printing."
     puts "I'd much rather you 'not'."
     puts 'I "said" do not touch this.'
+    puts "This line shouldn't be here."
 
   end
 end
