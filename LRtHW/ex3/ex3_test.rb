@@ -49,8 +49,5 @@ class Ex3Test < Minitest::Test
   def test_line_14
     assert_output(/Is it less or equal\? false\n$/) { @ex3.math }
   end
-#  def test_text
-#    assert_output(/^I will now count my chickens:\nHens 30\nRoosters 97\nNow I will count the eggs:\n7\nIs it true that 3 \+ 2 < 5 - 7\?\nfalse\nWhat is 3 \+ 2\? 5\nWhat is 5 - 7\? -2\nOh, that's why it's false\.\nHow about some more\.\nIs it greater\? true\nIs it greater or equal\? true\nIs it less or equal\? false\n$/) { @ex3.math }
-#  end
 
 end
