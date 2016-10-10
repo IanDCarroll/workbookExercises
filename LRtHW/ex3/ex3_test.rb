@@ -7,12 +7,50 @@ class Ex3Test < Minitest::Test
     @ex3 = Ex3.new()
   end
 
+  # Diagnostic Existence Checks #
+
+  def test_line_1_existence
+    assert_output(/I will now count my chickens\./) { @ex3.math }
+  end
+  def test_line_2_existence
+    assert_output(/Hens 30/) { @ex3.math }
+  end
+  def test_line_3_existence
+    assert_output(/Roosters 97/) { @ex3.math }
+  end
+  def test_line_4_existence
+    assert_output(/Now I will count the eggs:/) { @ex3.math }
+  end
+  def test_line_6_existence
+    assert_output(/Is it true that 3 \+ 2 < 5 - 7\?/) { @ex3.math }
+  end
+  def test_line_8_existence
+    assert_output(/What is 3 \+ 2\? 5/) { @ex3.math }
+  end
+  def test_line_9_existence
+    assert_output(/What is 5 - 7\? -2/) { @ex3.math }
+  end
+  def test_line_10_existence
+    assert_output(/Oh, that's why it's false\./) { @ex3.math }
+  end
+  def test_line_11_existence
+    assert_output(/How about some more\./) { @ex3.math }
+  end
+  def test_line_12_existence
+    assert_output(/Is it greater\? true/) { @ex3.math }
+  end
+  def test_line_13_existence
+    assert_output(/Is it greater or equal\? true/) { @ex3.math }
+  end
+  def test_line_14_existence
+    assert_output(/Is it less or equal\? false/) { @ex3.math }
+  end
+
+  # Positioning Tests # 
+
   def test_line_1_position
     assert_output(/^I will now count my chickens\.\n/) { @ex3.math }
   end
-#  def test_line_1_existence
-#    assert_output(/I will now count my chickens\./) { @ex3.math }
-#  end
   def test_line_2_position
     assert_output(/^.*\nHens 30\n/) { @ex3.math }
   end
