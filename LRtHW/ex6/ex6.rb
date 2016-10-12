@@ -13,7 +13,7 @@ class Ex6
     puts "I said: #{x}."
     puts "I also said: '#{y}'."
 
-    hilarious = false
+    hilarious = true
     joke_evaluation = "Isn't that joke so funny?! #{hilarious}"
 
     puts joke_evaluation
