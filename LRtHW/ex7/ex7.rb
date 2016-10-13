@@ -2,7 +2,11 @@ class Ex7
 
   def more_printing
 
-    puts ''
+    puts "Mary had a little lamb."
+    puts ""
+    puts ""
+    puts ""
+    puts ""
 
   end
 
