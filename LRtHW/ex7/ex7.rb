@@ -4,7 +4,7 @@ class Ex7
 
     puts "Mary had a little lamb."
     puts "Its fleece was white as snow."
-    puts ""
+    puts "And everywhere that Mary went."
     puts ""
     puts ""
 
