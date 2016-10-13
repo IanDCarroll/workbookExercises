@@ -19,7 +19,7 @@ class Ex7
     cha10 = 'g'
 
 
-
+    # print = puts w/o \n #
     print char1 + char2 + char3 * 2 + char5 + char3 
     puts char7 + char8 + char9 + cha10 + char3 + char9
 
