@@ -6,7 +6,7 @@ class Ex7
     puts "Its fleece was white as snow."
     puts "And everywhere that Mary went."
     puts ".........."
-    puts ""
+    puts "CheeseBurger"
 
   end
 
