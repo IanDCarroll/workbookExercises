@@ -5,7 +5,7 @@ class Ex10
     puts "\tI'm tabbed in."
     puts "I'm split"
     puts "on a line."
-    puts ""
+    puts "I'm  a  cat."
     puts ""
     puts ""
     puts ""
