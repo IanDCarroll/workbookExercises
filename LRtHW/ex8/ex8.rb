@@ -20,3 +20,7 @@ class Ex8
   end
 
 end
+
+ex8 = Ex8.new()
+
+ex8.printingX2()
