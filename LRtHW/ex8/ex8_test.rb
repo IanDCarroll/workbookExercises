@@ -17,7 +17,7 @@ class Ex8Test < Minitest::Test
     assert_output(/true false true false/) { @ex8.printingX2 }
   end
   def test_line_4
-    assert_output(/(%{first} %{second} %{third} %{fourth}){4}/) { @ex8.printingX2 }
+    assert_output(/(%{first} %{second} %{third} %{fourth} ){3}%{first} %{second} %{third} %{fourth}/) { @ex8.printingX2 }
   end
   def test_line_5
     assert_output(/I had this thing. That you could type up right. But it didn't sing. So I said goodnight./) { @ex8.printingX2 }
