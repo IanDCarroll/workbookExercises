@@ -8,7 +8,7 @@ class Ex9Test < Minitest::Test
   end
 
   def test_line_1
-    assert_output(/^Here are the days: Mon Tue Wed Thu Fri Sat Sun\n(.*\n).+$/) { @ex9.printingX3 }
+    assert_output(/^Here are the days: Mon Tue Wed Thu Fri Sat Sun\n(.*\n){12}.+$/) { @ex9.printingX3 }
   end
   def test_line_2
     assert_output(/^.*\nHere are the months: Jan\n(.*\n){11}.+$/) { @ex9.printingX3 }
