@@ -17,7 +17,7 @@ class Ex10Test < Minitest::Test
     assert_output(/^(.*\n){2}on a line\.\n(.*\n){6}.+$/) { @ex10.whatWasThat }
   end
   def test_line_4
-    assert_output(/^(.*\n){3}I'm  a  cat\.\n(.*\n){5}.+$/) { @ex10.whatWasThat }
+    assert_output(/^(.*\n){3}I'm \\ a \\ cat\.\n(.*\n){5}.+$/) { @ex10.whatWasThat }
   end
   def test_line_5
     assert_output(/^(.*\n){4}\n(.*\n){4}.+$/) { @ex10.whatWasThat }
