@@ -1,7 +1,10 @@
 class Ex8
 
   def printingX2
-    puts '1 2 3 4'
+
+    formatter = '%{first} %{second} %{third} %{fourth}'
+    
+    puts formatter % { first: 1, second: 2, third: 3, fourth: 4}
     puts 'one two three four'
     puts 'true false true false'
     puts '%{first} %{second} %{third} %{fourth}' * 4
