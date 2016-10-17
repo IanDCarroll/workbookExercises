@@ -6,13 +6,12 @@ class Ex10
     puts "I'm split"
     puts "on a line."
     puts "I'm  a  cat."
-    puts ""
-    puts ""
-    puts ""
-    puts ""
-    puts ""
-    puts ""
-    puts ""
+    puts """
+I'll do a list:
+\t* Cat food
+\t* Fishes
+\t* Catnip\n\t* Grass
+   """
 
   end
 
