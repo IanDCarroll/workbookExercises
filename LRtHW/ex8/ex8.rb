@@ -6,7 +6,7 @@ class Ex8
     
     puts formatter % { first: 1, second: 2, third: 3, fourth: 4}
     puts formatter % {first: 'one', second: 'two', third: 'three', fourth: 'four'}
-    puts 'true false true false'
+    puts formatter % {first: true, second: false, third: true, fourth: false}
     puts '%{first} %{second} %{third} %{fourth}' * 4
     puts 'I had this thing. That you could type up right. But it didn\'t sing. So I said goodnight.'
 
