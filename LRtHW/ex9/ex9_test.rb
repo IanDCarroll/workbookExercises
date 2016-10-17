@@ -44,7 +44,7 @@ class Ex9Test < Minitest::Test
     assert_output(/With the three double-quotes\./) { @ex9.printingX3 }
   end
   def test_line_13
-    assert_output(/We'll be able to as much as we like\./) { @ex9.printingX3 }
+    assert_output(/We'll be able to type as much as we like\./) { @ex9.printingX3 }
   end
   def test_line_14
     assert_output(/Even 4 lines if we want, or 5 or 6\./) { @ex9.printingX3 }
