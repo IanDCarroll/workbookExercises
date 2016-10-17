@@ -7,6 +7,7 @@ class Ex9
 
     puts "Here are the days: #{days}"
     puts "Here are the months: #{months}"
+
     puts """
 There's something going on here.
 With the three double-quotes.
