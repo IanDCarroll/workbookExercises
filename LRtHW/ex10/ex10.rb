@@ -3,8 +3,8 @@ class Ex10
   def whatWasThat
 
     puts "\tI'm tabbed in."
-    puts ""
-    puts ""
+    puts "I'm split"
+    puts "on a line."
     puts ""
     puts ""
     puts ""
