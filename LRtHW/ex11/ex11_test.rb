@@ -7,7 +7,7 @@ class Ex11Test < Minitest::Test
     @ex11 = Ex11.new()
   end
 
-  def test
+  def test_line
     assert_output(/So, you're .* old, .* tall and .* Heavy\./) { @ex11.questions }
   end
 
