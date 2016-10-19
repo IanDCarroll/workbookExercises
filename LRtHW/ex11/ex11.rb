@@ -25,7 +25,7 @@ class Ex11
     height = get_height
     weight = get_weight
 
-    puts "So, you're #{age} old, #{height} tall and #{weight} heavy."
+    return "So, you're #{age} old, #{height} tall and #{weight} heavy."
 
   end
 
@@ -33,4 +33,4 @@ end
 
 ex11 = Ex11.new()
 
-ex11.answer
+puts ex11.answer
