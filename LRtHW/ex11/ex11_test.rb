@@ -28,7 +28,7 @@ class Ex11Test < Minitest::Test
     end
 
     it "should print" do
-      @ex11.answer.must_equal "So you're 33 years old, 66 inches tall and 155 lbs heavy."
+      @ex11.answer.must_equal "So, you're 33 years old, 66 inches tall and 155 lbs heavy."
     end
   end
 end
