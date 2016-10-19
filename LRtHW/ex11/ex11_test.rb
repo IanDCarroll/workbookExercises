@@ -8,7 +8,7 @@ class Ex11Test < Minitest::Test
   end
 
   def test_line
-    assert_output(/So, you're .* old, .* tall and .* Heavy\./) { @ex11.questions }
+    assert_output(/So, you're 33 years old, 66 inches tall and 155 lbs heavy\./) { @ex11.answer("33 years","66 inches","155 lbs") }
   end
 
 end
