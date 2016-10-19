@@ -31,6 +31,6 @@ class Ex11
 
 end
 
-ex11 = Ex11.new()
+# ex11 = Ex11.new()
 
-puts ex11.answer
+# puts ex11.answer
