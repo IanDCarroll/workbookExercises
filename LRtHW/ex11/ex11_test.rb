@@ -12,13 +12,15 @@ class Ex11Test < Minitest::Test
   # qustions and answer because gets.chomp makes things difficult.
 
   describe "Answering questions" do
-    before do
+    class Dummy < Ex11
       def get_age; "33 years" end
       def get_height; "66 inches" end
       def get_weight; "155 lbs" end
+    end
+    before do
       # instantiating the class immediately discounts the settings above.
       # As this stands, I have to type the values manually to pass.
-      @ex11 = Ex11.new()
+      @ex11 = Dummy.new()
     end
 
     it "should print" do
