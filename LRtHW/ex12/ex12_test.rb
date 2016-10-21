@@ -7,8 +7,8 @@ class Ex12Test < Minitest::Test
     @ex12 = Ex12.new()
   end
 
-  def test_what_comes_out
-    assert_output(//) { @ex12.prompt }
+  def test_final_output
+    assert_output(/A smaller number is \d+\.?\d*/) { @ex12.prompt }
   end
 
 end
