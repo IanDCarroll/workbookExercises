@@ -1,6 +1,6 @@
 class Ex12
 
-  def get_numbers
+  def get_bigger
 
     print "Give me a number: "
     number = gets.chomp.to_i
@@ -37,5 +37,5 @@ end
 
 # ex12 = Ex12.new()
 
-# ex12.get_numbers
+# ex12.get_bigger
 # ex12.get_smaller
