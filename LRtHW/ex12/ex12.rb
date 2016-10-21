@@ -1,6 +1,6 @@
 class Ex12
 
-  def prompt
+  def get_numbers
 
     print "Give me a number: "
     number = gets.chomp.to_i
@@ -12,6 +12,12 @@ class Ex12
     another = gets.chomp
     number = another.to_i
 
+    prompt(number)
+
+  end
+
+  def prompt(number)
+
     smaller = number / 100
     puts "A smaller number is #{smaller}"
 
@@ -19,6 +25,6 @@ class Ex12
 
 end
 
-ex12 = Ex12.new()
+# ex12 = Ex12.new()
 
-ex12.prompt
+# ex12.get_numbers
