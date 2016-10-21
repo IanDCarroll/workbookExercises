@@ -4,14 +4,22 @@ class Ex12
 
     print "Give me a number: "
     number = gets.chomp.to_i
+    big_prompt(number)
+
+  end
+
+  def big_prompt(number)
 
     bigger = number * 100
-    puts "A bigger number is #{bigger}."
+    puts "A bigger number is #{bigger}"
+
+  end
+
+  def get_smaller
 
     print "Give me another Number: "
     another = gets.chomp
     number = another.to_i
-
     prompt(number)
 
   end
@@ -30,3 +38,4 @@ end
 # ex12 = Ex12.new()
 
 # ex12.get_numbers
+# ex12.get_smaller
