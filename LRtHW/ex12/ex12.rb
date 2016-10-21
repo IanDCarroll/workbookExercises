@@ -24,7 +24,7 @@ class Ex12
 
   end
 
-  def prompt(number)
+  def small_prompt(number)
 
     smaller = number / 100
     puts "A smaller number is #{smaller}"
