@@ -25,6 +25,8 @@ class Ex12
 
 end
 
+# uncomment to run #
+
 # ex12 = Ex12.new()
 
 # ex12.get_numbers
