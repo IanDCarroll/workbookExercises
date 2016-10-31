@@ -47,6 +47,6 @@ And you have a #{computer} computer.  Nice.
 
 end
 
-ex14 = Ex14.new()
+# ex14 = Ex14.new()
 
-ex14.prompt
+# ex14.prompt
