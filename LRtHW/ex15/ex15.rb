@@ -1,34 +1,30 @@
 class Ex15
 
   def read_argv
-
     filename = ARGV.first
-
-    txt = open(filename)
-
     puts "Here is your file #{filename}:"
-    print txt.read
-
+    open(filename)
+  end
+  def display_argv
+    print read_argv.read
   end
 
   def read_gets
-
     print "Type the filename again: "
     file_again = $stdin.gets.chomp
-
-    txt_again = open(file_again)
-
-    print txt_again.read
-
+    open(file_again)
+  end
+  def display_gets
+    print read_gets.read
   end
 
-  def read
-    read_argv
-    read_gets
+  def display
+    display_argv
+    display_gets
   end
 
 end
 
 ex15 = Ex15.new
 
-ex15.read
+ex15.display
