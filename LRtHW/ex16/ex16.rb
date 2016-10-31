@@ -1,34 +1,42 @@
-filename = ARGV.first
+class Ex16
 
-puts "We're going to erase #{filename}"
-puts "If you don't want that, hit CTRL-C (^C)."
-puts "If you do want that, hit RETURN."
+  def writer
 
-$stdin.gets
+    filename = ARGV.first
 
-puts "Opening the file..."
-target = open(filename, 'w')
+    puts "We're going to erase #{filename}"
+    puts "If you don't want that, hit CTRL-C (^C)."
+    puts "If you do want that, hit RETURN."
 
-puts "Truncating the file.  Goodbye!"
-target.truncate(0)
+    $stdin.gets
 
-puts "Now I'm going to ask you for three lines."
+    puts "Opening the file..."
+    target = open(filename, 'w')
 
-print "line 1:"
-line1 = $stdin.gets.chomp
-print "line 2:"
-line2 = $stdin.gets.chomp
-print "line 3:"
-line3 = $stdin.gets.chomp
+    puts "Truncating the file.  Goodbye!"
+    target.truncate(0)
 
-puts "I'm going to write these to the file."
+    puts "Now I'm going to ask you for three lines."
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+    print "line 1:"
+    line1 = $stdin.gets.chomp
+    print "line 2:"
+    line2 = $stdin.gets.chomp
+    print "line 3:"
+    line3 = $stdin.gets.chomp
 
-puts "And finally, we close it."
-target.close
+    puts "I'm going to write these to the file."
+
+    target.write(line1)
+    target.write("\n")
+    target.write(line2)
+    target.write("\n")
+    target.write(line3)
+    target.write("\n")
+
+    puts "And finally, we close it."
+    target.close
+
+  end
+
+end
