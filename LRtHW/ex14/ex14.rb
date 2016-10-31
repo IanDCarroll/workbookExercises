@@ -1,4 +1,4 @@
-class ex14
+class Ex14
 
   user_name = ARGV.first
   prompt = '> '
@@ -20,4 +20,4 @@ You live in #{lives}.  Not sure where that is.
 And you have a #{computer} computer.  Nice.
 """
 
-end
+endgs
