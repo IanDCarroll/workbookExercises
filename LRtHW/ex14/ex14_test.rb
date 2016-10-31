@@ -1,10 +1,16 @@
 require 'minitest/autorun'
 require './ex14'
 
+class Dummy < Ex14
+  def prompt_likes; "Yes" end
+  def prompt_lives; "Los Angeles" end
+  def prompt_computer; "old" end
+end
+
 class Ex14Test < Minitest::Test
 
   def setup
-    @ex14 = Ex14.new()
+    @ex14 = Dummy.new()
   end
 
   def test_final_output_line_1
