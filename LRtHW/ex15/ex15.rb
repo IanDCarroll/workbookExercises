@@ -28,3 +28,7 @@ class Ex15
   end
 
 end
+
+ex15 = Ex15.new
+
+ex15.read
