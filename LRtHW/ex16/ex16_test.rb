@@ -17,13 +17,13 @@ class Ex16Test < Minitest::Test
   end
 
   def test_file_line_1
-    assert_output(/ancient pond\n/) { @reader.print_file }
+    assert_output(/^ancient pond\n(.*\n){2}$/) { @reader.print_file }
   end
   def test_file_line_2
-    assert_output(/a frog jumps in\n/) { @reader.print_file }
+    assert_output(/^.*\na frog jumps in\n.*\n$/) { @reader.print_file }
   end
   def test_file_line_3
-    assert_output(/sound of water\n/) { @reader.print_file }
+    assert_output(/^(.*\n){2}sound of water\n$/) { @reader.print_file }
   end
 
 end
