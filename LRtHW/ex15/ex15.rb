@@ -1,13 +1,21 @@
-filename = ARGV.first
+class Ex15
 
-txt = open(filename)
+  def read
 
-puts "Here is your file #{filename}:"
-print txt.read
+    filename = ARGV.first
 
-print "Type the filename again: "
-file_again = $stdin.gets.chomp
+    txt = open(filename)
 
-txt_again = open(file_again)
+    puts "Here is your file #{filename}:"
+    print txt.read
 
-print txt_again.read
+    print "Type the filename again: "
+    file_again = $stdin.gets.chomp
+
+    txt_again = open(file_again)
+
+    print txt_again.read
+
+  end
+
+end
