@@ -40,3 +40,7 @@ class Ex16
   end
 
 end
+
+ex16 = Ex16.new
+
+ex16.writer
