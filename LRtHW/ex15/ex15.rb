@@ -25,6 +25,6 @@ class Ex15
 
 end
 
-ex15 = Ex15.new
+#ex15 = Ex15.new
 
-ex15.display
+#ex15.display

@@ -1,10 +1,16 @@
 require 'minitest/autorun'
 require './ex15'
 
+class Dummy < Ex15
+  def read_argv; open('ex15_sample.txt') end
+  def read_gets; open('ex15_sample.txt') end
+end
+
 class Ex15Test < Minitest::Test
 
   def setup
-    @ex15 = Ex15.new()
+    @ex15 = Dummy.new
+    #@ex15 = Ex15.new
   end
 
   def test_argv_output_line_1
