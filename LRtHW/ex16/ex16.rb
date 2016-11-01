@@ -1,23 +1,32 @@
 class Ex16
 
-  def writer
-
+  def get_argv
     filename = ARGV.first
+  end
 
-    puts "We're going to erase #{filename}"
+  def print_first
+    puts "We're going to erase #{get_argv}"
     puts "If you don't want that, hit CTRL-C (^C)."
     puts "If you do want that, hit RETURN."
-
+  end
+  
+  def open_file
     $stdin.gets
-
     puts "Opening the file..."
-    target = open(filename, 'w')
+    open(filename, 'w')
+  end
 
+  def truncate
     puts "Truncating the file.  Goodbye!"
-    target.truncate(0)
+    open_file.truncate(0)
+  end
 
+  def print_second
     puts "Now I'm going to ask you for three lines."
+  end
 
+
+  def get_new_lines
     print "line 1:"
     line1 = $stdin.gets.chomp
     print "line 2:"
@@ -33,10 +42,21 @@ class Ex16
     target.write("\n")
     target.write(line3)
     target.write("\n")
+  end
 
+  def close_file
     puts "And finally, we close it."
     target.close
-
+  end
+  
+  def writer
+    get_argv
+    print_first
+    open_file
+    truncate
+    print_second
+    get_new_lines
+    close_file
   end
 
 end
