@@ -30,7 +30,7 @@ class Ex16
 
 
   def get_new_lines
-    print "line 1:i "
+    print "line 1: "
     line1 = $stdin.gets.chomp
     print "line 2: "
     line2 = $stdin.gets.chomp
