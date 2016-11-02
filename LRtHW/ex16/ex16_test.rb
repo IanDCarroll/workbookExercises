@@ -44,4 +44,8 @@ class Ex16Test < Minitest::Test
     assert_output(/^(.*\n){2}sound of water\n$/) { @reader.print_file }
   end
 
+  def test_
+    assert_output(//) { @dummy.print_ }
+  end
+
 end
