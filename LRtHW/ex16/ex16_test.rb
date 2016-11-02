@@ -62,9 +62,9 @@ class Ex16Test < Minitest::Test
     assert_output(/^Now I'm going to ask you for three lines\.$/) { @dummy.print_4 }
   end
   def test_print_5
-    skip assert_output(/^I'm going to write these to the file\.$/) { @dummy.print_5 }
+    assert_output(/^I'm going to write these to the file\.$/) { @dummy.print_5 }
   end
   def test_print_6
-    skip assert_output(//) { @dummy.print_6 }
+    assert_output(/^And finally, we close it\.$/) { @dummy.print_6 }
   end
 end
