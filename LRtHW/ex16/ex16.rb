@@ -32,6 +32,7 @@ class Ex16
   end
 
   def print_5
+    puts "I'm going to write these to the file."
   end
 
   def get_new_lines
@@ -42,7 +43,7 @@ class Ex16
     print "line 3: "
     line3 = $stdin.gets.chomp
 
-    puts "I'm going to write these to the file."
+    print_5
     target = open_file
     target.write(line1)
     target.write("\n")
