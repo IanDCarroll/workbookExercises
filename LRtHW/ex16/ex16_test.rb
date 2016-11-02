@@ -20,10 +20,14 @@ class Dummy < Ex16
   end
 end
 
+# The files are being written, but TestReader only detects an empty file.
+#dummy = Dummy.new
+#dummy.writer
+
 class Ex16Test < Minitest::Test
 
   def setup
-    #@dummy = Dummy.new
+    @dummy = Dummy.new
     @reader = TestReader.new
   end
 
