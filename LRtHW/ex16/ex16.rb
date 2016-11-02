@@ -24,17 +24,17 @@ class Ex16
     open_file.truncate(0)
   end
 
-  def print_second
+  def print_third
     puts "Now I'm going to ask you for three lines."
   end
 
 
   def get_new_lines
-    print "line 1:"
+    print "line 1:i "
     line1 = $stdin.gets.chomp
-    print "line 2:"
+    print "line 2: "
     line2 = $stdin.gets.chomp
-    print "line 3:"
+    print "line 3: "
     line3 = $stdin.gets.chomp
 
     puts "I'm going to write these to the file."
@@ -58,7 +58,7 @@ class Ex16
     print_second
     open_file
     truncate
-    print_second
+    print_third
     get_new_lines
     close_file
   end
