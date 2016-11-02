@@ -31,6 +31,8 @@ class Ex16
     puts "Now I'm going to ask you for three lines."
   end
 
+  def print_5
+  end
 
   def get_new_lines
     print "line 1: "
