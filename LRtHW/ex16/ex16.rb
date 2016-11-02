@@ -4,13 +4,13 @@ class Ex16
     filename = ARGV.first
   end
 
-  def print_first
+  def print_1
     puts "We're going to erase #{get_argv}"
     puts "If you don't want that, hit CTRL-C (^C)."
     puts "If you do want that, hit RETURN."
   end
 
-  def print_second
+  def print_2
     puts "Opening the file..."
   end
 
@@ -19,12 +19,15 @@ class Ex16
     open(get_argv, 'w')
   end
 
+  def print_3
+    puts "truncating the file. Goodbye!"
+  end
+
   def truncate
-    puts "Truncating the file.  Goodbye!"
     open_file.truncate(0)
   end
 
-  def print_third
+  def print_4
     puts "Now I'm going to ask you for three lines."
   end
 
@@ -47,19 +50,24 @@ class Ex16
     target.write("\n")
   end
 
-  def close_file
+  def print_5
     puts "And finally, we close it."
+  end
+
+  def close_file
     open_file.close
   end
   
   def writer
     get_argv
-    print_first
-    print_second
+    print_1
+    print_2
     open_file
+    print_3
     truncate
-    print_third
+    print_4
     get_new_lines
+    print_5
     close_file
   end
 
