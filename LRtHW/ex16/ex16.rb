@@ -9,16 +9,17 @@ class Ex16
     puts "If you don't want that, hit CTRL-C (^C)."
     puts "If you do want that, hit RETURN."
   end
-  
+
   def open_file
     $stdin.gets
     puts "Opening the file..."
-    open(filename, 'w')
+    open(get_argv, 'w')
   end
 
   def truncate
     puts "Truncating the file.  Goodbye!"
     open_file.truncate(0)
+    open_file.close
   end
 
   def print_second
@@ -35,7 +36,7 @@ class Ex16
     line3 = $stdin.gets.chomp
 
     puts "I'm going to write these to the file."
-
+    target = open_file
     target.write(line1)
     target.write("\n")
     target.write(line2)
@@ -46,7 +47,7 @@ class Ex16
 
   def close_file
     puts "And finally, we close it."
-    target.close
+    open_file.close
   end
   
   def writer
@@ -61,6 +62,6 @@ class Ex16
 
 end
 
-ex16 = Ex16.new
+#ex16 = Ex16.new
 
-ex16.writer
+#ex16.writer
