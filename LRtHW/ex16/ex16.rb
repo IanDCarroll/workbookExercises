@@ -10,16 +10,18 @@ class Ex16
     puts "If you do want that, hit RETURN."
   end
 
+  def print_second
+    puts "Opening the file..."
+  end
+
   def open_file
     $stdin.gets
-    puts "Opening the file..."
     open(get_argv, 'w')
   end
 
   def truncate
     puts "Truncating the file.  Goodbye!"
     open_file.truncate(0)
-    open_file.close
   end
 
   def print_second
@@ -53,6 +55,7 @@ class Ex16
   def writer
     get_argv
     print_first
+    print_second
     open_file
     truncate
     print_second
