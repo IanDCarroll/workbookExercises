@@ -50,7 +50,7 @@ class Ex16
     target.write("\n")
   end
 
-  def print_5
+  def print_6
     puts "And finally, we close it."
   end
 
@@ -67,7 +67,7 @@ class Ex16
     truncate
     print_4
     get_new_lines
-    print_5
+    print_6
     close_file
   end
 
