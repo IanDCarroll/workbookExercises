@@ -48,9 +48,9 @@ class Ex16Test < Minitest::Test
   end
 
   def test_print_1
-    skip assert_output(//) { @dummy.print_1 }
-    skip assert_output(//) { @dummy.print_1 }
-    skip assert_output(//) { @dummy.print_1 }
+    assert_output(/We're going to erase .*/) { @dummy.print_1 }
+    assert_output(/If you don't want that, hit CTRL-C \(\^C\)\./) { @dummy.print_1 }
+    assert_output(/If you do want that, hit RETURN\./) { @dummy.print_1 }
   end
   def test_print_2
     skip assert_output(//) { @dummy.print_2 }
