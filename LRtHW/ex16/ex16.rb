@@ -20,7 +20,7 @@ class Ex16
   end
 
   def print_3
-    puts "truncating the file. Goodbye!"
+    puts "Truncating the file. Goodbye!"
   end
 
   def truncate
