@@ -10,10 +10,15 @@ class TestReader
   end
 end
 
+class Dummy < Ex16
+  
+end
+
 class Ex16Test < Minitest::Test
 
   def setup
     @reader = TestReader.new
+    @dummy = Dummy.new
   end
 
   def test_file_line_1
