@@ -53,10 +53,10 @@ class Ex16Test < Minitest::Test
     assert_output(/^(.*\n){2}If you do want that, hit RETURN\.$/) { @dummy.print_1 }
   end
   def test_print_2
-    skip assert_output(//) { @dummy.print_2 }
+    assert_output(/^Opening the file\.\.\.\n$/) { @dummy.print_2 }
   end
   def test_print_3
-    skip assert_output(//) { @dummy.print_3 }
+    assert_output(/^Truncating the file. Goodbye!$/) { @dummy.print_3 }
   end
   def test_print_4
     skip assert_output(//) { @dummy.print_4 }
