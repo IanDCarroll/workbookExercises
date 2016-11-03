@@ -9,23 +9,17 @@ end
 
 class Dummy < Ex16
   def open_file
-    #$stdin.gets
     open('test.txt', 'w') 
   end
   def get_new_lines
     target = open_file
-    target.write('ancient pond')
-    target.write("\n")
-    target.write('a frog jumps in')
-    target.write("\n")
-    target.write('sound of water')
-    target.write("\n")
+    target.write('ancient pond' + '\n' + 'a frog jumps in' + '\n' + 'sound of water' + '\n')
   end
 end
 
 # The files are being written, but TestReader only detects an empty file.
-# dummy = Dummy.new
-# dummy.writer
+#dummy = Dummy.new
+#dummy.writer
 
 class Ex16Test < Minitest::Test
 

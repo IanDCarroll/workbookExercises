@@ -45,12 +45,7 @@ class Ex16
 
     print_5
     target = open_file
-    target.write(line1)
-    target.write("\n")
-    target.write(line2)
-    target.write("\n")
-    target.write(line3)
-    target.write("\n")
+    target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
   end
 
   def print_6
@@ -76,6 +71,6 @@ class Ex16
 
 end
 
-#ex16 = Ex16.new
+ex16 = Ex16.new
 
-#ex16.writer
+ex16.writer
