@@ -9,13 +9,13 @@ class Ex16
     puts "Opening the file..." 
     puts "Truncating the file. Goodbye!"
   end
-  def print_4
+  def print_3
     puts "Now I'm going to ask you for three lines."
   end
-  def print_5
+  def print_4
     puts "I'm going to write these to the file."
   end
-  def print_6
+  def print_5
     puts "And finally, we close it."
   end
 
@@ -35,7 +35,7 @@ class Ex16
     line2 = $stdin.gets.chomp
     print "line 3: "
     line3 = $stdin.gets.chomp
-    print_5
+    print_4
     target = open_file
     target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
   end
@@ -50,9 +50,9 @@ class Ex16
     print_1
     print_2
     open_file
-    print_4
+    print_3
     get_new_lines
-    print_6
+    print_5
     close_file
   end
 

@@ -52,13 +52,13 @@ class Ex16Test < Minitest::Test
     assert_output(/^Opening the file\.\.\.\n.*$/) { @dummy.print_2 }
     assert_output(/^.*\nTruncating the file\. Goodbye!$/) { @dummy.print_2 }
   end
+  def test_print_3
+    assert_output(/^Now I'm going to ask you for three lines\.$/) { @dummy.print_3 }
+  end
   def test_print_4
-    assert_output(/^Now I'm going to ask you for three lines\.$/) { @dummy.print_4 }
+    assert_output(/^I'm going to write these to the file\.$/) { @dummy.print_4 }
   end
   def test_print_5
-    assert_output(/^I'm going to write these to the file\.$/) { @dummy.print_5 }
-  end
-  def test_print_6
-    assert_output(/^And finally, we close it\.$/) { @dummy.print_6 }
+    assert_output(/^And finally, we close it\.$/) { @dummy.print_5 }
   end
 end
