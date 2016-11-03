@@ -13,11 +13,13 @@ class Dummy < Ex16
   end
   def get_new_lines
     target = open_file
-    target.write('ancient pond' + '\n' + 'a frog jumps in' + '\n' + 'sound of water' + '\n')
+    target.write("ancient pond" + "\n" + "a frog jumps in" + "\n" + "sound of water" + "\n")
   end
 end
 
 # The files are being written, but TestReader only detects an empty file.
+# This means that every time I want to run a test, 
+# I have to manually uncomment the next two lines, have it fail, then run it again to see it pass.
 #dummy = Dummy.new
 #dummy.writer
 
@@ -47,10 +49,8 @@ class Ex16Test < Minitest::Test
     assert_output(/^(.*\n){2}If you do want that, hit RETURN\.$/) { @dummy.print_1 }
   end
   def test_print_2
-    assert_output(/^Opening the file\.\.\.\n$/) { @dummy.print_2 }
-  end
-  def test_print_3
-    assert_output(/^Truncating the file\. Goodbye!$/) { @dummy.print_3 }
+    assert_output(/^Opening the file\.\.\.\n.*$/) { @dummy.print_2 }
+    assert_output(/^.*\nTruncating the file\. Goodbye!$/) { @dummy.print_2 }
   end
   def test_print_4
     assert_output(/^Now I'm going to ask you for three lines\.$/) { @dummy.print_4 }

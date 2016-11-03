@@ -11,20 +11,13 @@ class Ex16
   end
 
   def print_2
-    puts "Opening the file..."
+    puts "Opening the file..." 
+    puts "Truncating the file. Goodbye!"
   end
 
   def open_file
     $stdin.gets
     open(get_argv, 'w')
-  end
-
-  def print_3
-    puts "Truncating the file. Goodbye!"
-  end
-
-  def truncate
-    open_file.truncate(0)
   end
 
   def print_4
@@ -61,8 +54,6 @@ class Ex16
     print_1
     print_2
     open_file
-    print_3
-    truncate
     print_4
     get_new_lines
     print_6
@@ -71,6 +62,6 @@ class Ex16
 
 end
 
-ex16 = Ex16.new
+#ex16 = Ex16.new
 
-ex16.writer
+#ex16.writer
