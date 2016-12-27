@@ -27,7 +27,7 @@ module Ex25
   def Ex25.sort_sentence(sentence)
     words = Ex25.break_words(sentence)
     return Ex25.sort_words(words)
-  ed
+  end
 
   # Prints the first and last words of the sentence.
   def Ex25.print_first_and_last(sentence
