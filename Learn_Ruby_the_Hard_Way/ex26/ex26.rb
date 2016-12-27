@@ -18,7 +18,7 @@ module Ex25
   end
 
   # Prints the last word after popping it off.
-  def Ex25:print_last_word(words)
+  def Ex25.print_last_word(words)
     word = words.pop
     puts word
   end
