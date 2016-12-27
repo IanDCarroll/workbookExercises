@@ -20,7 +20,7 @@ module Ex25
   # Prints the last word after popping it off.
   def Ex25:print_last_word(words)
     word = words.pop
-    put word
+    puts word
   end
 
   # Takes in a full sentence and returns the sorted words.
