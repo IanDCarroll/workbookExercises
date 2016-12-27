@@ -12,7 +12,7 @@ module Ex25
   end
 
   # Prints the first word after popping it off.
-  df Ex25.print_first_word(words)
+  def Ex25.print_first_word(words)
     word = words.pop(1)
     puts wor
   end
