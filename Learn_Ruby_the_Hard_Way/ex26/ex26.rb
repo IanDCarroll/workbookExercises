@@ -7,7 +7,7 @@ module Ex25
   end
 
   # Sorts the words.
-  def Ex25.sortwords(words)
+  def Ex25.sort_words(words)
     return words.sort
   end
 
