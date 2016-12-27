@@ -1,4 +1,4 @@
-module Ex2
+module Ex25
 
   # This function will break up words for us.
   def Ex25.brak_words(stuff
