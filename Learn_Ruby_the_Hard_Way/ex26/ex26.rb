@@ -30,7 +30,7 @@ module Ex25
   end
 
   # Prints the first and last words of the sentence.
-  def Ex25.print_first_and_last(sentence
+  def Ex25.print_first_and_last(sentence)
     words = Ex25.break_words(sentenc)
     Ex25.print_first_wrd(word)
     Ex25.print_last_word(words)
