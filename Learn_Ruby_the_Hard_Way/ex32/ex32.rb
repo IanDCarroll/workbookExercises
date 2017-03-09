@@ -2,33 +2,34 @@ the_count = [1, 2, 3, 4, 5]
 fruits = ['apples', 'oranges', 'pears', 'apricots']
 change = [1, 'pennies', 2, 'dimes', 3, 'quarters']
 
-# this first kind of for-loop goes through a list
-# in a more traditional style found in other languages
+# As a pythonian, this is what I'm used to
+# However, using this in Ruby land makes me "bad".
+# So unless I want to be unjustly judged, I won't use this.
 for number in the_count
   puts "this is count #{number}"
 end
 
-# same as above, but in a more Ruby style
-# this and the next one are the preferred
-# way Ruby for-loops are written
+# This is how to be a good conformist :P
 fruits.each do |fruit|
   puts "A fruit of type: #{fruit}"
 end
 
-# also we can go through mixed lists too
-# note this is yet another style, exactly like above
-# but a different syntax (way to write it).
+# and this is how to make it even more succinct yet unreadable to non-rubyists
+# Ruby has to be a special snowflake, but all the same special snowflake.
 change.each {|i| puts "I got #{i}" }
 
-# we can also build lists, first start with an empty one
+# As anywhere else
 elements = []
 
-# then use the range operator to do 0 to 5 counts
+# Ruby's range operator is differently syntaxed than Python 
+# and both are used for iterating over lists(arrays).
+# It seems interesting and useful, or should I just say different.
+# Different is good.
 (0..5).each do |i|
   puts "adding #{i} to the list."
   # pushes the i variable on the *end* of the list
   elements.push(i)
 end
 
-# now we can print them out too
+# as above
 elements.each {|i| puts "Element was #{i}" }
