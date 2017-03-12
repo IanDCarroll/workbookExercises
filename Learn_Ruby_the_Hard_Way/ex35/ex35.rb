@@ -80,7 +80,7 @@ def start
 
   if choice == "left"
     bear_room
-  if choice == "right"
+  elsif choice == "right"
     cthulhu_room
   else
     dead("You stumble around the room until you starve.")
