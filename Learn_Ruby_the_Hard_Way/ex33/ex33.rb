@@ -2,13 +2,15 @@ def whileCounter(stopping_point, increment)
   i = 0
   numbers = []
 
-  while i < stopping_point
-    puts "At the top i is #{i}"
-    numbers.push(i)
+  (0 .. stopping_point).each do |j|
+    if j % increment == 0
+      puts "At the top i is #{i}"
+      numbers.push(i)
 
-    i += increment
-    puts "Numbers now: ", numbers
-    puts "At the bottom i is #{i}"
+      i += increment
+      puts "Numbers now: ", numbers
+      puts "At the bottom i is #{i}"
+    end
   end
 
 
