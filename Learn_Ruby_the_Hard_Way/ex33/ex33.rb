@@ -1,4 +1,4 @@
-def whileCounter(stopping_point)
+def whileCounter(stopping_point, increment)
   i = 0
   numbers = []
 
@@ -6,7 +6,7 @@ def whileCounter(stopping_point)
     puts "At the top i is #{i}"
     numbers.push(i)
 
-    i += 1
+    i += increment
     puts "Numbers now: ", numbers
     puts "At the bottom i is #{i}"
   end
@@ -18,4 +18,4 @@ def whileCounter(stopping_point)
   numbers.each {|num| puts num }
 end
 
-whileCounter(6)
+whileCounter(12, 2)
