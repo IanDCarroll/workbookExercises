@@ -35,6 +35,12 @@ module Dict
     return -1, key, default
   end
 
+  def Dict.get(aDict, key, default=nil)
+    #gets the value in a bucket for the given key, or the default.
+    i, k, v = Dict.get_slot(aDict, key, default=default)
+    return v
+  end
+
   def Dict.set(aDict, key, value)
     # Sets the key to the value, replacing any existing value.
     bucket = Dict.get_bucket(aDict, key)
