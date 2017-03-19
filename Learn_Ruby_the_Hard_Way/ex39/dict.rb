@@ -1,6 +1,9 @@
 module Dict
   def Dict.new(num_buckets=256)
-    # Initializes a Dict with the given number of buckets.
+    # Initializes a new Dict object with variable 'aDict'.
+    # aDict is an empty 2-Dimensional array 256 x 0 in dimension.
+    # Each bucket is an empty array inside the greater array 
+    # meant to house a single key-value pair.
     aDict = []
     (0...num_buckets).each do |i|
        aDict.push([])
@@ -10,19 +13,23 @@ module Dict
   end
 
   def Dict.hash_key(aDict, key)
-    # Given a key this will create a number and then convert it to
-    # an index for the aDict's buckets.
+    # .hash is a built-in ruby function that converts a string to a number.
+    # That number is then modulated down until it is within the limits of the array.
+    # This is then used as an index for the key-value pair in the array.
     return key.hash % aDict.length
   end
 
   def Dict.get_bucket(aDict, key)
-    # given a key, find the bucket where it would go.
+    # Uses hash_key to access an index in the array 
+    # where the key-value pair is/will be stored.
     bucket_id = Dict.hash_key(aDict, key)
     return aDict[bucket_id]
   end
 
   def Dict.get_slot(aDict, key, default=nil)
     # Returns the index, key, and value of a slot found in a bucket.
+    # Basically it returns every value in the bucket.
+    # This is computationally a lot more efficient than having to check the entire dict.
     bucket = Dict.get_bucket(aDict, key)
 
     bucket.each_with_index do |kv, i|
