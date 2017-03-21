@@ -32,7 +32,9 @@ module Dict
     # This is computationally a lot more efficient than having to check the entire dict.
     bucket = Dict.get_bucket(aDict, key)
 
+    # .each_with_index creates two variables, what the contents are, and what the index is.
     bucket.each_with_index do |kv, i|
+      # this unpacks the bucket(AKA: array) that was indexed.
       k, v = kv
       if key == k
         return i, k, v
