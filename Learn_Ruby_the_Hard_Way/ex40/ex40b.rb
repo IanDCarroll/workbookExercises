@@ -1,6 +1,8 @@
 class MyStuff
 
   def initialize()
+    # ruby @ means self or this
+    # ruby $ is used for global variables
     @tangerine = "And now a thousand years between"
   end
 
