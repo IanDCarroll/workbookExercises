@@ -89,3 +89,29 @@ class CentralCorridor < Scene
     end
   end
 end
+
+class LaserWeaponArmory < Scene
+
+  def enter()
+    puts ""
+    code = "#{rand(1..9)}#{rand(1..9)}#{rand(1..9)}"
+    print "[keypad]> "
+    guess = $stdin.gets.chomp
+    guesses = 0
+
+    while guess != code && guesses < 10
+      puts "BZZZZEDDD!"
+      guesses += 1
+      print "[keypad]> "
+      guess = $stdin.gets.chomp
+    end
+
+    if guess = code
+      puts ""
+      return 'the_bridge'
+    else
+      puts ""
+      return 'death'
+    end
+  end
+end
