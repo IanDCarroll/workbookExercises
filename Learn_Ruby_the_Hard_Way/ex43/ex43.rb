@@ -81,7 +81,7 @@ class CentralCorridor < Scene
       puts "The Gothon stops, tries not to laugh, then bursts out laughing and can't move."
       puts "While he's laughing you run up and shoot him square in the head"
       puts "putting him down, then jump through the weapon armory door."
-      return 'finished'
+      return 'laser_weapon_armory'
 
     else
       puts "DOES NOT COMPUTE!"
@@ -213,7 +213,8 @@ class Map
     'laser_weapon_armory' => LaserWeaponArmory.new(),
     'the_bridge' => TheBridge.new(),
     'escape_pod' => EscapePod.new(),
-    'death' => Death.new()
+    'death' => Death.new(),
+    'finished' => Finished.new()
   }
 
   def initialize(start_scene)
