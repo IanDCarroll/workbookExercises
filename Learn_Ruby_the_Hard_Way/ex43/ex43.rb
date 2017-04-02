@@ -35,7 +35,7 @@ class Death < Scene
   ]
 
   def enter()
-    puts @@quips[rand(0..(@@quips.length -1))]
+    puts @@quips[rand(0..(@@quips.length))]
     exit(1)
   end
 end
@@ -213,8 +213,7 @@ class Map
     'laser_weapon_armory' => LaserWeaponArmory.new(),
     'the_bridge' => TheBridge.new(),
     'escape_pod' => EscapePod.new(),
-    'death' => Death.new(),
-    'finished' => Finished.new()
+    'death' => Death.new()
   }
 
   def initialize(start_scene)
