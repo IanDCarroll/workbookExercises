@@ -126,3 +126,27 @@ class LaserWeaponArmory < Scene
     end
   end
 end
+
+class TheBridge < Scene
+
+  def enter()
+    puts ""
+    print "> "
+
+    action = $stdin.gets.chomp
+
+    if action == "throw the bomb"
+      puts ""
+      return 'death'
+
+    elsif action == "slowly place the bomb"
+      puts ""
+      return 'escape_pod'
+    else
+      puts "DOES NOT COMPUTE!"
+      return "the_bridge"
+    end
+  end
+end
+
+ 
