@@ -113,7 +113,7 @@ class LaserWeaponArmory < Scene
       guess = $stdin.gets.chomp
     end
 
-    if guess = code || guess = other_code
+    if guess == code || guess == other_code
       puts "The container clicks open and the seal breaks, letting gas out."
       puts "You grab the neutron bomb and run as fast as you can to the"
       puts "bridge where you must place it in the right spot."
