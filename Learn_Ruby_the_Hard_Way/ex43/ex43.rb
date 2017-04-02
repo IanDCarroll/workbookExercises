@@ -149,4 +149,28 @@ class TheBridge < Scene
   end
 end
 
- 
+class EscapePod < Scene
+
+  def enter()
+    puts ""
+
+    good_pod = rand(1..5)
+    print "[pod #]> "
+    guess = $stdin.gets.chomp.to_i
+
+    if guess != good_pod
+      puts ""
+      return 'death'
+    else
+      puts ""
+
+      return 'finished'
+    end
+  end
+end
+
+class Finished < Scene
+  def enter()
+    puts ""
+  end
+end
