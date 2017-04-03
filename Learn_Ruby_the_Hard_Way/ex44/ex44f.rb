@@ -8,7 +8,7 @@ module Other
     puts "OTHER implicit()"
   end
 
-  def altered
+  def Other.altered
     puts "OTHER altered()"
   end
 end
@@ -22,7 +22,7 @@ class Child
 
   def altered
     puts "CHILD, BEFORE OTHER altered()"
-    Other.altered()
+    Other.altered
     puts "CHILD, AFTER OTHER altered()"
   end
 end
