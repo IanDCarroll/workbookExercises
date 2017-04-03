@@ -1,4 +1,4 @@
-class Other
+class Hammer
 
   def override
     puts "OTHER override()"
@@ -16,11 +16,11 @@ end
 class Child
 
   def initialize
-    @other = Other.new
+    @hammer = Hammer.new
   end
 
   def implicit
-    @other.implicit
+    @hammer.implicit
   end
 
   def override
@@ -29,13 +29,13 @@ class Child
 
   def altered
     puts "CHILD, BEFORE OTHER altered()"
-    @other.altered
+    @hammer.altered
     puts "CHILD, AFTER OTHER altered()"
   end
 end
 
-son = Child.new
+maxwell = Child.new
 
-son.implicit
-son.override
-son.altered
+maxwell.implicit
+maxwell.override
+maxwell.altered
