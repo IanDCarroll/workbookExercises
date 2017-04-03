@@ -1,39 +1,39 @@
 class Parent
 
-  def override()
+  def override
     puts "PARENT override()"
   end
 
-  def implicit()
+  def implicit
     puts "PARENT implicit()"
   end
 
-  def altered()
+  def altered
     puts "PARENT altered()"
   end
 end
 
 class Child < Parent
 
-  def override()
+  def override
     puts "CHILD override()"
   end
 
-  def altered()
+  def altered
     puts "CHILD, BEFORE PARENT altered()"
     super()
     puts "CHILD, AFTER PARENT altered()"
   end
 end
 
-dad = Parent.new()
-son = Child.new()
+dad = Parent.new
+son = Child.new
 
-dad.implicit()
-son.implicit()
+dad.implicit
+son.implicit
 
-dad.override()
-son.override()
+dad.override
+son.override
 
-dad.altered()
-son.altered()
+dad.altered
+son.altered
