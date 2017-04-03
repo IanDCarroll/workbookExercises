@@ -9,6 +9,8 @@ class Child < Parent
     puts "CHILD, BEFORE PARENT altered()"
     super()
     puts "CHILD, AFTER PARENT altered()"
+    super()
+    puts "CHILD, AFTER PARENT altered() CALLED TWICE"
   end
 end
 
