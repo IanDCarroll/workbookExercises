@@ -13,9 +13,8 @@ class Engine
 
   def play()
     current_scene = @scene_map.opening_scene()
-    last_scene = @scene_map.next_scene('finished') # remove hard-coding here
 
-    while current_scene != last_scene
+    while true
       next_scene_name = current_scene.enter()
       current_scene = @scene_map.next_scene(next_scene_name)
     end
@@ -27,14 +26,30 @@ end
 class SpecificScene < Scene
 end
 
-class Finished < Scene
-  def enter()
-    puts "END!"
+class Loss < Scene
+  def enter
+    puts "You have lost."
+    exit(0)
+  end
+end
+
+class Win < Scene
+  def enter
+    puts "You have won!"
+    exit(0)
+  end
+end
+
+class Exit < Scene
+  def enter
+    exit(0)
   end
 end
 
 class Map
   @@scenes = {
     'begin' => SpecificScene.new,
-    'finished' => Finished.new
+    'dead' => Loss.new
+    'finished' => Win.new
+    'exit' => Exit.new
   }
