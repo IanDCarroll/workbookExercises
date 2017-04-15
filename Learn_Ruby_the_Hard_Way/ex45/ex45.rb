@@ -1,9 +1,4 @@
-class Scene
-  def enter
-    puts "I didn't write anything for the scene yet or set it where to go so this is the end."
-    exit(1)
-  end
-end
+require './scene_class.rb'
 
 class Engine
 
@@ -23,7 +18,26 @@ class Engine
   end
 end
 
-class SpecificScene < Scene
+class Begin < Scene
+  def enter
+    puts "You wake up and die immediately."
+    return 'loss'
+  end
+end
+
+class Metro < Scene
+end
+
+class Aikido < Scene
+end
+
+class EighthLight < Scene
+end
+
+class DandD < Scene
+end
+
+class Sleep < Scene
 end
 
 class Loss < Scene
@@ -40,16 +54,26 @@ class Win < Scene
   end
 end
 
-class Exit < Scene
-  def enter
-    exit(0)
+class Map
+  @@scenes = {
+    'begin' => Begin.new,
+    'loss' => Loss.new,
+    'win' => Win.new
+  }
+
+  def initialize(start_scene)
+    @start_scene = start_scene
+  end
+
+  def next_scene(scene_name)
+    return @@scenes[scene_name]
+  end
+
+  def opening_scene
+    return next_scene(@start_scene)
   end
 end
 
-class Map
-  @@scenes = {
-    'begin' => SpecificScene.new,
-    'dead' => Loss.new
-    'finished' => Win.new
-    'exit' => Exit.new
-  }
+the_map = Map.new('begin')
+the_game = Engine.new(the_map)
+the_game.play
