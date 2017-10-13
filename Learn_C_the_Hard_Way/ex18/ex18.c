@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
         numbers[i] = atoi(inputs[i]);
     }
 
-    //test sorting
+    //test_sorting
 
     free(numbers);
     return 0;
@@ -35,4 +35,18 @@ void die(const char *message) {
         printf("ERROR: %s\n", message);
     }
     exit(1);
+}
+
+void test_sorting(int *numbers, int count, compare_cb cmp) {
+    int *sorted = numbers; //buble sort
+
+    if(!sorted) die("Failed to sort as requested");
+
+    int i = 0;
+    for (i = 0; i < count; i++) {
+        printf("%d ", sorted[i]);
+    }
+    printf("\n");
+
+    free(sorted);
 }
