@@ -9,5 +9,15 @@ void test_sorting(int *numbers, int count, compare_cb cmp);
 void die(const char *message);
 
 int main(int argc, char *argv[]) {
-   return 0;
+    if (argc < 2) die("USAGE: ex18 4 3 1 5 6");
+    return 0;
+}
+
+void die(const char *message) {
+    if (errno) {
+        perror(message);
+    } else {
+        printf("ERROR: %s\n", message);
+    }
+    exit(1);
 }
