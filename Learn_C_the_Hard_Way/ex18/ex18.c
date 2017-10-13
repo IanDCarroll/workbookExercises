@@ -5,6 +5,9 @@
 
 typedef int (*compare_cb) (int a, int b);
 int *bubble_sort(int *numbers, int count, compare_cb cmp);
+int sorted_order(int a, int b);
+int reverse_order(int a, int b);
+int strange_order(int a, int b);
 void test_sorting(int *numbers, int count, compare_cb cmp);
 void die(const char *message);
 
