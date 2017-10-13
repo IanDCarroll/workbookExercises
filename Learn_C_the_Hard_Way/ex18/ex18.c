@@ -10,6 +10,21 @@ void die(const char *message);
 
 int main(int argc, char *argv[]) {
     if (argc < 2) die("USAGE: ex18 4 3 1 5 6");
+
+    int count = argc - 1;
+    int i = 0;
+    char **inputs = argv + 1;
+
+    int *numbers = malloc(count * sizeof(int));
+    if (!numbers) die("Memory error.");
+
+    for (i = 0; i < count; i++) {
+        numbers[i] = atoi(inputs[i]);
+    }
+
+    //test sorting
+
+    free(numbers);
     return 0;
 }
 
